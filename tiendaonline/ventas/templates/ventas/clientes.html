@@ -1,0 +1,38 @@
+{% extends "ventas/layout.html" %}
+
+
+{% block content %}
+<body style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-image:  url(https://img.freepik.com/vector-gratis/fondo-concepto-registro-online_23-2147984853.jpg?w=2000);
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment:fixed;
+margin: 0px;
+overflow-x: hidden;"> 
+
+<div>
+
+    <table class= "table">
+      <tr>
+        <th>id</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Email</th>
+        <th>Telefono</th>
+        <th>Direccion</th>
+      </tr>
+      {% for cli in data %}  
+      <tr>
+        <td>{{cli.id}}</td>
+        <td>{{cli.nombre}}</td>
+        <td>{{cli.apellido}}</td>
+        <td>{{cli.email}}</td>
+        <td>{{cli.telefono}}</td>
+        <td>{{cli.direccion}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  
+  </div>
+
+
+{% endblock  %}

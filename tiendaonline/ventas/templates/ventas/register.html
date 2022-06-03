@@ -1,0 +1,31 @@
+lines (11 sloc) 296 Bytes
+
+{% extends 'ventas/layout.html' %}
+{% block content %}
+<form action="" method="POST">
+
+
+    {% csrf_token %}
+    <div id='form_registro'>
+        <h1> Registro de Usuarios </h1>
+
+        {{ form.as_p }}
+        <button type="submit">Registrarse</button>
+
+    </div>
+
+</form>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
